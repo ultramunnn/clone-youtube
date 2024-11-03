@@ -64,6 +64,7 @@ img {
   max-width: var(--site-max-witdh);
 }
 
+
 /* navbar styling */
 
 header {
@@ -107,6 +108,8 @@ header .navbar {
   display: none;
 
 }
+
+    
 
 .hero-section {
   min-height: 100vh;
