@@ -64,7 +64,6 @@ img {
   max-width: var(--site-max-witdh);
 }
 
-
 /* navbar styling */
 
 header {
@@ -104,12 +103,9 @@ header .navbar {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
-.navbar :where(#menu-close-button, #menu-open-button) {
+.navbar #menu-close-button, #menu-open-button {
   display: none;
-
 }
-
-    
 
 .hero-section {
   min-height: 100vh;
@@ -182,7 +178,18 @@ header .navbar {
     --font-size-xxl: 1.8rem;
   }
 
+  body.show-mobile-menu header{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.2);
+  }
+
   .navbar :where(#menu-close-button, #menu-open-button) {
+    display: block;
     font-size: var(--font-size-l);
   }
 
@@ -212,9 +219,10 @@ header .navbar {
     transition: left 0.2 ease;
   }
 
-  body.show-mobile-menu .navbar .nav-menu{
+  body.show-mobile-menu .navbar .nav-menu {
     left: 0;
   }
+  
   .navbar .nav-menu .nav-link {
     color: var(--dark-color);
     font-size: var(--font-size-l);
